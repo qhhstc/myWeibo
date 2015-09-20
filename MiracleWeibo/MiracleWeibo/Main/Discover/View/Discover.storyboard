@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="V00-Ww-nnm">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Base Nav Controller-->
+        <scene sceneID="efC-GJ-FDi">
+            <objects>
+                <navigationController id="V00-Ww-nnm" customClass="BaseNavController" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gf1-te-Yxi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fKb-HT-ZjR" kind="relationship" relationship="rootViewController" id="Uvs-98-uZa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2VG-b8-FfS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-553" y="392"/>
+        </scene>
+        <!--发现-->
+        <scene sceneID="c5z-Tw-YO6">
+            <objects>
+                <viewController id="fKb-HT-ZjR" customClass="DiscoverViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mvi-nN-tPH"/>
+                        <viewControllerLayoutGuide type="bottom" id="n9H-D8-V4E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tEN-HN-K5Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhD-k2-YQ0">
+                                <rect key="frame" x="16" y="78" width="110" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="YgZ-D2-sO4"/>
+                                    <constraint firstAttribute="height" constant="110" id="Z18-rl-3Og"/>
+                                    <constraint firstAttribute="width" constant="110" id="quJ-bw-Lh3"/>
+                                    <constraint firstAttribute="height" constant="97" id="tDy-Yt-ObO"/>
+                                </constraints>
+                                <state key="normal" image="附近微博.jpg">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="YgZ-D2-sO4"/>
+                                        <exclude reference="tDy-Yt-ObO"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="nearbyWb:" destination="fKb-HT-ZjR" eventType="touchUpInside" id="kw1-H8-Ttx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5LU-uu-Ohm">
+                                <rect key="frame" x="144" y="78" width="110" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="2J1-09-3nJ"/>
+                                    <constraint firstAttribute="height" constant="110" id="Ewd-sm-Kww"/>
+                                    <constraint firstAttribute="width" constant="110" id="dw3-LY-Sii"/>
+                                    <constraint firstAttribute="height" constant="102" id="y6w-HZ-9U6"/>
+                                </constraints>
+                                <state key="normal" image="附近的人.jpg">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2J1-09-3nJ"/>
+                                        <exclude reference="y6w-HZ-9U6"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5LU-uu-Ohm" firstAttribute="top" secondItem="mvi-nN-tPH" secondAttribute="bottom" constant="14" id="57p-fn-Pgl"/>
+                            <constraint firstItem="VhD-k2-YQ0" firstAttribute="top" secondItem="mvi-nN-tPH" secondAttribute="bottom" constant="14" id="FYg-n3-jsB"/>
+                            <constraint firstItem="VhD-k2-YQ0" firstAttribute="leading" secondItem="tEN-HN-K5Y" secondAttribute="leadingMargin" id="sMu-sO-BoS"/>
+                            <constraint firstItem="5LU-uu-Ohm" firstAttribute="leading" secondItem="VhD-k2-YQ0" secondAttribute="trailing" constant="18" id="zaG-vX-0Nf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="发现" id="yls-eO-8C4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="osf-AH-K5T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-50.5" y="391.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="附近微博.jpg" width="184" height="184"/>
+        <image name="附近的人.jpg" width="184" height="184"/>
+    </resources>
+</document>

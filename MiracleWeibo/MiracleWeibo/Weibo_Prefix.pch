@@ -1,0 +1,19 @@
+//
+//  Weibo_Prefix.pch
+//  MiracleWeibo
+//
+//  Created by 天才邱海晖 on 15/8/19.
+//  Copyright (c) 2015年 no.4. All rights reserved.
+//
+
+#ifndef MiracleWeibo_Weibo_Prefix_pch
+#define MiracleWeibo_Weibo_Prefix_pch
+
+#import "Common.h"
+#import "UIViewExt.h"
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif
